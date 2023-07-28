@@ -6,10 +6,13 @@ def insertData(request):
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        country = request.POST.get('country')
+        city = request.POST.get('city')
         age = request.POST.get('age')
         gender = request.POST.get('gender')
 
-        query = People.objects.create(name=name, email=email, age=age, gender=gender)
+        query = People.objects.create(name=name, email=email, phone=phone,country=country,city=city, age=age, gender=gender)
         query.save()
         return redirect("/")
     return render(request, "index.html")
