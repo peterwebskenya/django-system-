@@ -1,5 +1,6 @@
 1. edit html add input
 2. edit model and add field
-3. makemigration > migrate
-4.go to views and add field to the query
-5. go to html file
+3. makemigration > migrate   >python manage.py makemigration (enter name of your migration) then migrate >python manage.py migrate
+4.go to views and add field to the query > add the new field added to models again to views, order does not real matter.
+5. to display new data go to html file add new fields to your table   >   <th></th>,<th>{{}}</th>
+6. edit the new fields under (inputs) activite the edits, under edit code you also need to update the new fields   (edit.data = people.
